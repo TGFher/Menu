@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild  } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Menu';
+  title = 'Facturacion-NT';
+  @ViewChild('sidenav') sidenav: MatSidenav | undefined;
+
+  constructor(
+    private dialog: MatDialog,  //Etiqueta para abrir un dialogo
+  ) { }
+
 }
